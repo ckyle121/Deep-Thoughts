@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ThoughtList = ({ thoughts, title }) => {
-    if (!thoughts.length) {
-        return <h3>No Thoughts Yet</h3>;
-      }
+  if (!thoughts.length) {
+    return <h3>No Thoughts Yet</h3>;
+  }
 
-    return (
+  return (
     <div>
       <h3>{title}</h3>
       {thoughts &&
@@ -30,11 +30,11 @@ const ThoughtList = ({ thoughts, title }) => {
                   {thought.reactionCount ? 'see' : 'start'} the discussion!
                 </p>
               </Link>
-          </div>
+            </div>
           </div>
         ))}
     </div>
   );
-}
+};
 
 export default ThoughtList;

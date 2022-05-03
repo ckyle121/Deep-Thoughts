@@ -1,10 +1,15 @@
 import React from 'react';
-import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -40,29 +45,29 @@ function App() {
           <Header />
           <div className="container">
             <Routes>
-              <Route
-                path="/"
-                element={<Home />}
+              <Route 
+                path="/" 
+                element={<Home />} 
               />
-              <Route
-                path="/login"
-                element={<Login />}
+              <Route 
+                path="/login" 
+                element={<Login />} 
               />
-              <Route
-                path="/signup"
-                element={<Signup />}
+              <Route 
+                path="/signup" 
+                element={<Signup />} 
               />
-              <Route
-                path="/profile/:username?"
-                element={<Profile />}
+              <Route 
+                path="/profile" 
+                element={<Profile />} 
               />
-              <Route
-                path="/thought/:id?"
-                element={<SingleThought />}
+              <Route 
+                path="/thought/:id" 
+                element={<SingleThought />} 
               />
-              <Route
-                path="*"
-                element={<NoMatch />}
+              <Route 
+                path="*" 
+                element={<NoMatch />} 
               />
             </Routes>
           </div>

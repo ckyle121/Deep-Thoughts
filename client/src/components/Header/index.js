@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import Auth from '../../utils/auth';
 
 const Header = () => {
@@ -20,13 +21,13 @@ const Header = () => {
             <>
               <Link to="/profile">Me</Link>
               <a href="/" onClick={logout}>
-                Log Out
+                Logout
               </a>
             </>
           ) : (
             <>
-              <Link to="/login">Log In</Link>
-              <Link to="/signup">Sign Up</Link>
+              <Link to="/login">Login</Link>
+              <Link to="/signup">Signup</Link>
             </>
           )}
         </nav>
